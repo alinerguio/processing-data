@@ -7,7 +7,6 @@ import os
 
 def download_multiple_datasets():
     files = ['voxforge-ptbr.tar.gz']
-    # files = ['voxforge-ptbr.tar.gz', 'alcaim.tar.gz']
     # files = ['lapsbm-val.tar.gz', 'voxforge-ptbr.tar.gz', 'lapsbm-test.tar.gz', 'alcaim.tar.gz']
     for file in files:
         path = './data/' + file
@@ -46,7 +45,13 @@ def unzip_all_data(directory):
         print('folder ' + element.split('.')[0] + ' created and zip erased')
 
 
+def create_dir():
+    if not(os.path.isdir('./data/')):
+        os.makedirs('./data/')
+
+
 if __name__ == '__main__':
-    # download_laps_datasets()
-    # download_multiple_datasets()
+    create_dir()
+    download_laps_datasets()
+    download_multiple_datasets()
     unzip_all_data('./data/')

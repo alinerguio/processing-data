@@ -2,7 +2,11 @@
 
 ## Goal
 
-The goal is to download and process audios to be able to transcript them using some other tools. In this case, the goal is to transcript using the [Google Cloud Platform Tool](https://github.com/alinerguio/google-transcript-tool).
+The goal is to download and organize the audios in order to facilitate the transcription and analysis. This repository was developed to be used in a research that resulted in other repositories, such as:
+
+- [Google Cloud Speech to Text API use](https://github.com/alinerguio/google-transcript-tool)
+
+- [Vosk API](https://github.com/alinerguio/vosk-transcript-tool)
 
 ## Requirements
 
@@ -68,10 +72,5 @@ There is also a database that needs to be downloaded manually, and it has many d
 
 The *adapting_databases.py* script assumes that the data is in the **dowload_databases/data** folder. The main goal of this script is to organize the dowloaded data to make the processing easier. Because of that, this processing is very specific for the databases already mentioned in the last session. It basically rearranges the audio files into a single folder with the name of the database. Also, it gets the respective transcriptions (in some cases they were in the txt format) and creates a dataframe with two columns: the original transcription and the file name. Also, it is created a dataframe with the original transcription without punctuation. 
 
-The *process_files.py* script assumes that the data is in the **data** folder. This script processes the files using the [pydub](https://pypi.org/project/pydub/) library - this [material](https://s3.amazonaws.com/assets.datacamp.com/production/course_17718/slides/chapter3.pdf) was used for some basic understanding of the library. This processing is needed to make the data consistent, so only one script can be used for the transcription. 
-
-Also, to be able to run the transcription files, this script creates a dictionary and saves it in a text file. That's because the file name and its respective frame rate to use the transcription for each file. 
-
-The *split_data.py* has two functions that split the data into buckets to be processed. The first one divides the text file's content into multiple text files, generating a kind of bucket so the processing of the *main.py* transcript doesn't take that long. The second one split the common voice's database into the female and others. The goal was to be sure to process all female data, because in this case, at this time, it constitutes 3% of the total data. 
 
 
