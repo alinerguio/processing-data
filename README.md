@@ -15,12 +15,22 @@ To use this code, you'll need this requirements.
 [![Python Version](https://img.shields.io/badge/python-3.8.2-green)](https://www.python.org/downloads/release/python-382/)
 
 When the repository is first cloned, use this commands:
+
+- Unix: 
+
 ```
 $ python3 -m venv env
 $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
+- Windows:
+
+```
+$ py -m venv env
+$ .\env\Scripts\activate
+$ pip install -r requirements.txt
+```
 Also, you will have to install [FFmpeg](https://www.ffmpeg.org/) to be able to process the files. 
 
 
@@ -48,9 +58,19 @@ Common:
 
 ## Execution
 Then, every time you want to access, don't forget to activate you enviroment:
+
+- Unix
+
 ```
 $ source env/bin/activate
 ```
+
+- Windows
+
+```
+$ .\env\Scripts\activate
+```
+
 
 ## Pipeline
 
