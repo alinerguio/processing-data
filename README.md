@@ -86,11 +86,25 @@ First of all, it is needed to acquire the data. For this test, some free Brazili
 
 There is also a database that needs to be downloaded manually, and it has many different languages in it. 
 
+To download the data, is necessary to be inside the **download_databases** folder and execute the following command:
+
+```
+$ python3 download_files.py
+```
+
+
  - [Common Voice Portuguese](https://commonvoice.mozilla.org/pt/datasets)
 
 ### Processing 
 
 The *adapting_databases.py* script assumes that the data is in the **dowload_databases/data** folder. The main goal of this script is to organize the dowloaded data to make the processing easier. Because of that, this processing is very specific for the databases already mentioned in the last session. It basically rearranges the audio files into a single folder with the name of the database. Also, it gets the respective transcriptions (in some cases they were in the txt format) and creates a dataframe with two columns: the original transcription and the file name. Also, it is created a dataframe with the original transcription without punctuation. 
+
+To process the data, is necessary to execute the following command:
+
+```
+$ python3 adapting_databases.py
+```
+
 
 
 
