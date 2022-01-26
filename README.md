@@ -86,14 +86,13 @@ First of all, it is needed to acquire the data. For this test, some free Brazili
 
 There is also a database that needs to be downloaded manually, and it has many different languages in it. 
 
+ - [Common Voice Portuguese](https://commonvoice.mozilla.org/pt/datasets)
+
 To download the data, is necessary to be inside the **download_databases** folder and execute the following command:
 
 ```
 $ python3 download_files.py
 ```
-
-
- - [Common Voice Portuguese](https://commonvoice.mozilla.org/pt/datasets)
 
 ### Processing 
 
