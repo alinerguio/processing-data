@@ -1,3 +1,5 @@
 ./env/
 .DS_Store
-/download_databases/.DS_Store
+./download_databases/.DS_Store
+./data/
+./download_databases/data/
