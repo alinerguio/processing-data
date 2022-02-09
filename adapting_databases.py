@@ -99,6 +99,7 @@ def adapt_common_voice(base_dir, list_dir):
         list_dir = [element for element in list_dir if ('common-voice' in element or 'cv-corpus' in element) and ('.tar.gz' not in element and '.zip' not in element)]
         
         base_dir = base_dir + list_dir[0] + '/pt/'
+        list_dir = [element for element in os.listdir(base_dir)]
 
         if not os.path.isdir(new_dir):
             os.makedirs(new_dir)
